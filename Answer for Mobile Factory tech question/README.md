@@ -6,7 +6,7 @@ This application is developed for answering a tech question assigned by Mobile F
 
 <b>Question: Please develop an application in which can check whether the time assigned is between a specific time frame</b>
 <br/>
-Requirement: <br/>
+Requirements: <br/>
 1. Record the time frame in 24-hour clock form (including start hour and end hour) <br/>
 2. The minimum unit should be "hour" instead of "minute" <br/>
 3. The time input to be checked should include the start hour only, the end hour is no needed <br/>
