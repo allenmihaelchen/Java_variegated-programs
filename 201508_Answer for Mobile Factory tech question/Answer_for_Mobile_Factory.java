@@ -58,13 +58,7 @@ public class Answer_for_Mobile_Factory {
 			
 			
 			check(value_a,value_b,value_c);  //Set a method to make the codes more concise
-			/**
-			if (value_a + value_b == value_c){
-				System.out.print("Yes");
-			}else{
-				System.out.print("No!");
-			};
-			*/
+			
 			
 		}else if(end > start){
 			value_a = Math.abs(assign - start); 
@@ -74,40 +68,26 @@ public class Answer_for_Mobile_Factory {
 			check(value_a,value_b,value_c);
 			
 		}else if((assign<end) || (assign>start && assign>end)){
-		
 			System.out.print("Yes");
-			/**	
-			if(assign==0){
-				System.out.print("Yes");
-			}else
-			
-			value_a = 24-start;
-			value_b = end;
-			
-			*/
+			//Given the situation that the end point is smaller than the start point 
+			//(which means that the time frame crossed the time point of 24 or 00),
+			//then the point assigned less than the end point or those greater than	
+			//both start and end point are definitely within the time frame
 		}else{
 			System.out.print("No!");
-			
-			/**
-			value_a = Math.abs(assign - start);
-			value_b = Math.abs(assign + (24-start));
-			value_c = Math.abs((24-start) + end);
-			
-			check(value_a,value_b,value_c);
-			*/
 		}
-		
-		//System.out.println("The start time is " + start);
-		//System.out.println("The end time is " + end);
-		//System.out.print("The assigned time is " + assign);
-			
 		
 		
 	}
 	
 	private static void check(int a, int b, int c) {
+		//The function for checking whether a assigned time is within the time frame by
+		//calculating the value a, b and c elaborated between line 42 to line 57
 		
 		if (a + b == c || a==b || a==c){
+		// 1. a + b = c : the assigned time point is between the start and end but not in the middle
+		// 2. a == b: the assigned time point is between the start and end and locate in the middle
+		// 3. a == c: the assigned time point is exactly the same as the end point 
 			System.out.print("Yes");
 		}else{
 			System.out.print("No!");
